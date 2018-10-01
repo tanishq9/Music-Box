@@ -18,13 +18,14 @@ import java.util.ArrayList;
 public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     ArrayList<List> arrayList;
     Context c;
+    MediaPlayer mediaPlayer;
     Adapter(ArrayList<List> list, Context context){
         this.arrayList=list;
         this.c=context;
     }
     class Holder extends RecyclerView.ViewHolder {
         FloatingActionButton play,pause,stop;
-        MediaPlayer mediaPlayer;
+
         public Holder(View itemView) {
             super(itemView);
             mediaPlayer=MediaPlayer.create(c,R.raw.coming);
